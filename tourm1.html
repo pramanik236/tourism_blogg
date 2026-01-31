@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Calligraffitti&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fredoka:wght@300..700&family=Funnel+Display:wght@300..800&family=Heebo:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=League+Spartan:wght@100..900&family=Lobster&family=Montez&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Newa&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&family=Pragati+Narrow:wght@400;700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sacramento&family=Signika:wght@300..700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* overflow: hidden; */
+        }
+
+        .maindiv {
+            width: 100%;
+
+        }
+
+        .firstcontainer {
+            width: 100%;
+            background-color: #e9f6f9;
+            line-height: 1.1;
+            padding-top: 8%;
+        }
+
+        .aboutus {
+            font-size: 39px;
+            font-weight: 500;
+            font-family: "Montez", cursive;
+            margin-left: 6.8%;
+        }
+
+        .praandbutton {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .pra {
+            font-size: 48px;
+            font-weight: 600;
+            color: #113d48;
+            margin-left: 6.8%;
+        }
+
+        .Button1 {
+            border: 1px solid #62828a;
+            border-radius: 30px;
+            height: 56px;
+            width: 220px;
+            color: #315963;
+            background-color: transparent;
+            font-size: 17px;
+            position: relative;
+            margin-right: 6.5%;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s all;
+            z-index: 1;
+        }
+
+        .rightarrow {
+            height: 30px;
+            width: 30px;
+        }
+
+        .Button1::before {
+            content: " ";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 0px;
+            z-index: -1;
+            background-color: #1ca8cb;
+            transition: 0.5s all;
+            border-radius: 30px;
+        }
+
+        .Button1:hover::before {
+            width: 100%;
+        }
+
+        .Button1:hover {
+            color: white;
+            border: 1px solid #1ca8cb;
+        }
+
+        /* slidebar css start */
+        .slidebar {
+            width:100%;
+            /* background-color: #315963; */
+            margin-top: 3.8%;
+            cursor: pointer;
+            /* overflow: hidden; */
+            padding: 0px 102px;
+        }
+
+        .slider-wrapper {   
+            width:100%;
+            /* background-color: red; */
+            margin: auto;
+            /* background-color: #264811; */
+             display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box1 {
+            width: 423px;
+            height: auto;
+            border-radius: 10px;
+            font-family: "Roboto", sans-serif;
+            /* background-color: #1ca8cb; */
+            transition: 0.6s all;
+        }
+
+        .box1:hover .imge1 {
+            transform: scale(1.1);
+            transition: 0.6s all;
+        }
+
+        .box1:hover {
+            margin-top: -1%;
+            transition: all 0.6s;
+        }
+
+        .imgbox {
+            overflow: hidden;
+            border-radius: 18px;
+            position: relative;
+            transition: 1s all;
+            transition: transform 1s all;
+        }
+
+        .imgbox::before {
+            position: absolute;
+            box-shadow: 0px 0px 0px rgb(255, 255, 255);
+            content: " ";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            /* border-radius: 18px; */
+            transition: transform 1s ease;
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+
+        .imgbox:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
+            box-shadow: 4px -5px 16px rgb(255, 255, 255);
+        }
+
+        .imge1 {
+            /* height: 380px; */
+            border-radius: 18px;
+            transition: 0.6s all;
+        }
+
+        /* .imge1:hover {
+            transform: scale(1.1);
+            transition: 0.5s all;
+        }  */
+
+        .julyanddash1 {
+            display: flex;
+            align-items: center;
+            margin-top: 8%;
+            word-spacing: 1px;
+            gap: 16px;
+            margin-bottom: 15px;
+        }
+
+        .july {
+            text-decoration: none;
+            color: #787b7b;
+            font-size: 14px;
+        }
+
+        .july:hover {
+            color: #1ca8cb;
+            transition: .4s all;
+        }
+
+        .read11 {
+            text-decoration: none;
+            color: #787b7b;
+            font-size: 14px;
+        }
+
+        .read11:hover {
+            color: #1ca8cb;
+            transition: .4s all;
+        }
+
+        .dash1 {
+            height: 10px;
+            width: 1px;
+            background-color: #878787;
+        }
+
+        .reason10 {
+            text-decoration: none;
+            color: #2b4e57;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .reason10:hover {
+            color: #1ca8cb;
+            transition: .4s all;
+        }
+
+        .readmore {
+            /* padding: 12px 26px; */
+            height: 48px;
+            border: 1px solid #54767f;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #113d48;
+            position: relative;
+            z-index: 1;
+            transition: 0.5S all;
+            overflow: hidden;
+            width: 38.5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 7%;
+
+        }
+
+        .readmore::before {
+            content: " ";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            z-index: -1;
+            background-color: #1ca8cb;
+            transition: 0.5s all;
+            border-radius: 25px;
+            width: 0;
+        }
+
+        .readmore:hover::before {
+            width: 100%;
+        }
+
+        .readmore:hover {
+            color: white;
+            border: 1px solid #1ca8cb;
+        }
+
+        .arrow1 {
+            height: 22px;
+            width: 22px;
+        }
+
+        .box2 {
+            border-radius: 10px;
+            width: 423px;
+            transition: 0.6s all;
+        }
+
+        .box2:hover .imge1 {
+            transform: scale(1.1);
+            transition: all 0.6s;
+        }
+
+        .box2:hover {
+            margin-top: -1%;
+            transition: all 0.6s;
+        }
+
+        .box3 {
+            border-radius: 10px;
+            width: 423px;
+            transition: all 0.6s;
+        }
+
+        .box3:hover .imge1 {
+            transform: scale(1.1);
+            transition: all 0.6s;
+        }
+
+        .box3:hover {
+            margin-top: -1%;
+            transition: all 0.6s;
+        }
+
+        /* slidebar css start */
+        .secondcontainer {
+            width: 100%;
+            background-color: #ffffff;
+            padding-top: 6%;
+        }
+
+        .secondfirstdiv1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3.1%;
+        }
+
+        .getupdateprg {
+            font-size: 39px;
+            width: 450px;
+            line-height: 1.4;
+            font-weight: 500;
+            margin-left: 7%;
+            font-family: "Inter", sans-serif;
+        }
+
+        .inputandsend {
+            width: 651px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 7%;
+        }
+
+        .input {
+            height: 62.6px;
+            width: 410px;
+            border-radius: 50px;
+            outline: 1px solid #6E7070;
+            padding-left: 4%;
+            transition: 0.4s ease-in-out;
+            border: none;
+            background-color: white;
+        }
+
+        .input:focus {
+            outline: 1px solid #1ca8cb;
+        }
+
+        .Subscribe {
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            height: 64px;
+            width: 223px;
+            border-radius: 48px;
+            -webkit-transition: all 0.3s 0s ease-out;
+            transition: all 0.3s 0s ease-out;
+            gap: 10px;
+            border: none;
+            background-color: #113D48;
+            color: white;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .Subscribe .svgsendi {
+            height: 20px;
+            width: 20px;
+            /* background-color: #113D48; */
+        }
+
+        .Subscribe::before {
+            position: absolute;
+            z-index: -1;
+            content: " ";
+            left: 0px;
+            top: 0px;
+            background-color: #1ca8cb;
+            height: 100%;
+            width: 0px;
+            border-radius: 48px;
+            transition: 0.5s all;
+        }
+
+        .Subscribe:hover::before {
+            width: 100%;
+        }
+
+        .beforefooter {
+            margin-left: auto;
+            margin-right: auto;
+            width: 86%;
+            border-top: 1px solid #E1E4E6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 3.6%;
+            flex-wrap: wrap;
+        }
+
+        .class1 {
+            width: 318px;
+            /* background-color: #1ca8cb; */
+        }
+
+        .imgandprg1 {
+            width: 100%;
+            display: flex;
+            align-content: center;
+            gap: 5px;
+        }
+
+        .earth {
+            height: 72px;
+            width: 100px;
+        }
+
+        .imgearth {
+            height: 100%;
+            width: 100%;
+        }
+
+        .trouandEplore {
+            line-height: 1.2;
+        }
+
+        .trou {
+            font-size: 34px;
+            font-weight: 600;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .Eplore1 {
+            margin-left: 4%;
+            font-size: 13.4px;
+            font-weight: 500;
+            color: #15414b;
+            font-family: "M PLUS Rounded 1c", sans-serif;
+        }
+
+        .Rapidiouslyprg {
+            font-family: "Inter", sans-serif;
+            color: #666666;
+            line-height: 1.6;
+            margin-top: 4.6%;
+        }
+
+        .FTLWI {
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 6%;
+        }
+
+        .F {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: #E9F6F9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: 0.6s all;
+        }
+
+        .svgF {
+            position: absolute;
+            color: #1ca8cb;
+            /* border-radius: 50%; */
+        }
+
+        .F:hover {
+            background-color: #1ca8cb;
+            transition: 0.6s all;
+        }
+
+        .F:hover .svgF {
+            bottom: -50%;
+            transition: 0.6s all;
+        }
+
+        .svgF1 {
+            position: absolute;
+            top: -50%;
+            /* border-radius: 50%;  */
+        }
+
+        .F:hover .svgF1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            transition: 0.6s all;
+        }
+
+        .class2 {}
+
+        .quick {
+            font-family: "Inter", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            color: #113d48;
+        }
+
+        .H {
+            display: flex;
+            /* align-items: center; */
+            flex-direction: column;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 2.6;
+            margin-top: 3%;
+        }
+
+        .home {
+            color: #9599a2;
+            text-decoration: none;
+            font-family: "Inter", sans-serif;
+        }
+
+        .home:hover {
+            color: #1ca8cb;
+            transition: 1s all;
+        }
+
+        .rightcolor {
+            height: 15px;
+            width: 15px;
+            color: #8e929c;
+        }
+
+        .home:hover .rightcolor {
+            color: #1ca8cb;
+            transition: 1s all;
+        }
+
+        .class3 {}
+
+        .address {
+            font-family: "Inter", sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            color: #113d48;
+        }
+
+        .contacts {
+            display: flex;
+            /* align-items: center; */
+            gap: 16px;
+        }
+
+        .no1 {
+            height: 40px;
+            width: 40px;
+            background-color: #E9F6F9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .no1:hover {
+            background-color: #1ca8cb;
+            color: white;
+            transition: .8s all;
+        }
+
+        .no1:hover .callicon {
+            fill: white;
+            transition: .5s all;
+        }
+
+        .callicon {
+            /* font-size: 18px; */
+            fill: #1ca8cb;
+        }
+
+        .callicon1 {
+            color: #1ca8cb;
+            height: 21px;
+            width: 21px;
+        }
+
+        .no1:hover .callicon1 {
+            color: white;
+            transition: .5s all;
+        }
+
+        .no2 {
+            display: flex;
+            /* align-items: center; */
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        .number {
+            font-family: "Inter", sans-serif;
+            text-decoration: none;
+            color: #7c7e7e;
+        }
+
+        .number:hover {
+            color: #1ca8cb;
+            transition: 0.6s all;
+        }
+
+        .number1 {
+            font-family: "Inter", sans-serif;
+            text-decoration: none;
+            color: #7c7e7e;
+        }
+
+        .class4 {
+            width: 325px;
+            /* height: 100px; */
+            /* background-color: skyblue; */
+        }
+
+        .insta {
+            font-family: "Inter", sans-serif;
+            font-size: 26px;
+            font-weight: 500;
+            color: #113d48;
+        }
+
+        .smallimage1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5.9%;
+        }
+
+        .smallimg {
+            height: 100px;
+            width: 100px;
+            /* background-color: #15414b; */
+            border-radius: 6%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blureffect1 {
+            position: absolute;
+            background-color: #113d48cb;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border-radius: 6%; */
+            transform: scale(0);
+            transition: 0.1s all;
+            transition: transform .5s ease;
+            border-radius: 50%;
+        }
+
+        .smallimg:hover .blureffect1 {
+            transform: scale(1.5);
+            border-radius: none;
+        }
+
+        .towerimg {
+            height: 100%;
+            width: 100%;
+            border-radius: 6%;
+        }
+
+        .smallimage2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer {
+            height: 68px;
+            width: 100%;
+            background-image: url('../useforimage/nature1.avif');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .footer::before {
+            position: absolute;
+            content: " ";
+            background-color: #113d48a5;
+            /* background-color: #94110dcb; */
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        .copy {
+            color: white;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            margin-left: 7%;
+        }
+
+        .visa {
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: red; */
+            margin-right: 6%;
+        }
+
+        .headclass {
+            width: 226px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .visa1 {
+            height: 30px;
+            width: 50px;
+            border-radius: 5%;
+            /* background-color: #113D48; */
+
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+Rounded+1c&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="maindiv"> <!--  maindiv start in programe -->
+        <div class="firstcontainer"><!--  firstcontainer start in programe -->
+            <div class="aboutus">About Us Restaurant</div>
+            <div class="praandbutton">
+                <div class="pra">News & Articles From Tourm</div>
+                <button class="Button1" onclick="">
+                    See More Articles&nbsp;
+                    <svg class="rightarrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="slidebar">
+                <div class="slider-wrapper">
+                    <div class="box1">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/boat.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 12 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                11 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            The 7 amazing destinations for adventure seekers
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+
+                    </div>
+
+                    <div class="box2">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/desert.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 09 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                9 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            10 Reason why you should visit New Jersy
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+                    </div>
+
+
+                    <div class="box3">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/dridge.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 10 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                10 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            The best time to visit japan & enjoy the cherry blossoms
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+
+                    </div>
+                    <!-- 
+                    <div class="box1">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/boat.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 12 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                11 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            The 7 amazing destinations for adventure seekers
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+
+                    </div> -->
+                    <!-- 
+                    <div class="box1">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/boat.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 12 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                11 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            The 7 amazing destinations for adventure seekers
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- <div class="box1">
+                        <div class="imgbox">
+                            <img class="imge1" src="../useforimage/boat.jpg" alt="">
+                        </div>
+                        <div class="julyanddash1">
+                            <a href="" class="july">
+                                July 12 2024
+                            </a>
+                            <div class="dash1"></div>
+                            <a href="" class="read11">
+                                11 Min Read
+                            </a>
+                        </div>
+                        <a href="" class="reason10">
+                            The 7 amazing destinations for adventure seekers
+                        </a>
+                        <div href="" class="readmore">
+                            <div> Read More</div>&nbsp;&nbsp;
+                            <div style="display: flex;align-items: center;justify-content: center;"><svg class="arrow1"
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg></div>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+            <div style="height: 106px;width: 100%;"></div>
+        </div><!-- firstcontainer end in programe -->
+        <div class="secondcontainer"><!-- secondcontainer start in programe -->
+
+            <div class="secondfirstdiv1">
+                <div class="getupdateprg">
+                    Get Updated The Latest Newsletter
+                </div>
+                <div class="inputandsend">
+                    <input class="input " type="text" placeholder="Enter Email">
+                    <button type="button" class="Subscribe">
+                        <div class="SNprg"> Subscribe Now</div>
+                        <svg class="svgsendi" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                            <path
+                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="beforefooter">
+                <div class="class1">
+                    <div class="imgandprg1">
+                        <div class="earth"> <img class="imgearth" src="../useforimage/earth.png" alt=""></div>
+                        <div class="trouandEplore">
+                            <div class="trou">
+                                Tourm
+                            </div>
+                            <div class="Eplore1">
+                                Explore World
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Rapidiouslyprg">
+                        Rapidiously myocardinate cross-platform
+                        intellectual capital model. Appropriately
+                        create interactive infrastructures
+                    </div>
+                    <div class="FTLWI">
+                        <a href="" class="F">
+                            <div></div>
+                            <svg class="svgF" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+
+                            <svg class="svgF1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+                        <a href="" class="T F">
+                            <svg class="svgF" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+
+                            <svg class="svgF1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+                        </a>
+                        <a href="" class="L F">
+                            <svg class="svgF" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+
+                            <svg class="svgF1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                        </a>
+                        <a href="" class="W F">
+                            <svg class="svgF" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            </svg>
+
+                            <svg class="svgF1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            </svg>
+                        </a>
+                        <a href="" class="I F">
+                            <svg class="svgF" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+
+                            <svg class="svgF1" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- <div style="height: 50px;width: 100%;"></div> -->
+                </div>
+                <div class="class2">
+                    <div class="quick">
+                        Quick Links
+                    </div>
+                    <div class="H">
+                        <a href="" class="home">
+                            <svg class="rightcolor" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>&nbsp;
+                            Home
+                        </a>
+                        <a href="" class="home">
+                            <svg class="rightcolor" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>&nbsp;
+                            About us
+                        </a>
+                        <a href="" class="home">
+                            <svg class="rightcolor" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>&nbsp;
+                            Our Service
+                        </a>
+                        <a href="" class="home">
+                            <svg class="rightcolor" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>&nbsp;
+                            Terms of Service
+                        </a>
+                        <a href="" class="home">
+                            <svg class="rightcolor" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>&nbsp;
+                            Tour Booking Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="class3">
+                    <div class="address">
+                        Address
+                    </div>
+                    <div style="height: 22px;width: 100%;"></div>
+                    <div class="contacts">
+                        <div class="no1">
+                            <svg class="callicon" xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="20px" fill="#">
+                                <path
+                                    d="M744-481q0-109-77.5-186.5T480-745v-72q70 0 131.13 26.6 61.14 26.6 106.4 71.87 45.27 45.26 71.87 106.4Q816-551 816-481h-72Zm-144 0q0-50-35-85t-85-35v-72q80 0 136 56.16T672-481h-72Zm163 336q-121-9-229.5-59.5T339-341q-86-86-136-194.5T144-765q-2-21 12.29-36.5Q170.57-817 192-817h136q17 0 29.5 10.5T374-780l24 107q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-75H218q5 38 14 74t23 71Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z" />
+                            </svg>
+                        </div>
+                        <div class="no2">
+                            <a href="" class="number">+01 234 567 890</a>
+                            <a href="" class="number">+09 876 543 210</a>
+                        </div>
+                    </div>
+                    <div style="height: 18px;width: 100%;"></div>
+                    <div class="contacts">
+                        <div class="no1">
+                            <svg class="callicon" xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="20px" fill="#">
+                                <path
+                                    d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm312-240L168-611v347h624v-347L480-432Zm0-85 312-179H168l312 179Zm-312-94v-85 432-347Z" />
+                            </svg>
+                        </div>
+                        <div class="no2">
+                            <a href="" class="number">mailinfo00@tourm.com</a>
+                            <a href="" class="number">support24@tourm.com</a>
+                        </div>
+                    </div>
+                    <div style="height: 17px;width: 100%;"></div>
+                    <div class="contacts">
+                        <div class="no1">
+                            <svg class="callicon1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                            </svg>
+
+                        </div>
+                        <div class="no2">
+                            <a class="number1">789 Inner Lane, Holy park,</a>
+                            <a class="number1">California, USA</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="class4">
+                    <div class="insta">Instagram Post</div>
+                    <div class="smallimage1">
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/tower.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/seabeach.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/boat.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 12px;width:100%;"></div>
+                    <div class="smallimage2">
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/seamen.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/park.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img class="towerimg" src="../useforimage/seatower.jpg" alt="">
+                            <div class="blureffect1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 100px;width: 100%;"></div>
+            <div class="footer">
+                <div class="copy">Copyright 2025 Tourm. All Rights Reserved.</div>
+                <div class="visa">
+                    <div class="copy">We Accept</div>
+                    <div class="headclass">
+                        <img style="height: 100%;width: 100%;" src="../useforimage/cards.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div><!--secondcontainer end in programe -->
+    </div><!--  maindiv end in programe -->
+</body>
+
+</html>
